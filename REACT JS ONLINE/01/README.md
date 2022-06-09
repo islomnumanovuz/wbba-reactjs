@@ -25,3 +25,14 @@ const students = [
   { id: 9, status: "IT", name: "Mahmudov Asadbek" },
 ];
 ```
+
+### add
+
+```
+const createObj = (id, status, name) => ({ id, status, name });
+function addStudent(obj) {
+  students.push(obj);
+  return students;
+}
+console.log(addStudent(createObj(10, "IT", "Nozima")));
+```

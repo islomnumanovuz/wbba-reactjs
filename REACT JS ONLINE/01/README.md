@@ -10,7 +10,7 @@
 
 ### update - getUpdate()
 
-### delete - getDe;ete()
+### delete - getDelete()
 
 ```
 const students = [
@@ -35,4 +35,37 @@ function addStudent(obj) {
   return students;
 }
 console.log(addStudent(createObj(10, "IT", "Nozima")));
+```
+
+### read
+
+- getSortByID()
+- getSortByName()
+- getSortByStatus()
+
+```
+
+function getSortByID(arr) {
+  const sortedArr = arr.sort((a, b) => {
+    return a.id - b.id;
+  });
+  return sortedArr;
+}
+console.log(getSortByID(students));
+```
+
+```
+function getSortByName(arr) {
+  const sortedArr = arr.sort((a, b) => {
+    return a.name > b.name ? 1 : -1;
+  });
+  return sortedArr;
+}
+console.log(getSortByName(students));
+```
+
+### update
+
+```
+
 ```

@@ -64,8 +64,37 @@ function getSortByName(arr) {
 console.log(getSortByName(students));
 ```
 
+```
+function getSortByStatus(arr) {
+  const sortedArr = arr.sort((a, b) => {
+    return a.status > b.status ? 1 : -1;
+  });
+  return sortedArr;
+}
+console.log(getSortByStatus(students));
+```
+
 ### update
 
 ```
+function getUpdate(arr) {
+  arr.map((value) => {
+    return (value.descripttion = `Name of user ${value.name}, id: ${value.id} and status ${value.status}`);
+  });
+  return arr;
+}
+console.log(getUpdate(students));
+```
 
+### delete - getDelete()
+
+```
+function getDelete(arr, id) {
+  const deleteArr = arr.findIndex((value) => {
+    return value.id === id;
+  });
+  return students.splice(deleteArr, 1);
+}
+console.log(getDelete(students, 2));
+console.log(students);
 ```

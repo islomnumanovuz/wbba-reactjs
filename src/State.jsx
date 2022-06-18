@@ -6,7 +6,6 @@ export class State extends React.Component{
     this.state = {
       students: [],
       email: "",
-      username: "",
       password: "",
       surname: ""
     }
@@ -15,20 +14,18 @@ export class State extends React.Component{
     const onSubmit = () => {
       console.log(this.state);
     }
-    const onChangeSurname = ({target}) => {
-      this.setState({surname: target.value})
-    }
-    const onChangeName = ({target}) => {
-      this.setState({username: target.value})
-    }
-    const onChangePassword = ({target}) => {
-      this.setState({password: target.value})
+    const onChange = ({target}) => {
+      this.setState({[target.name]: target.value})
     }
     return(
       <div style={{display: "flex", flexDirection: "column"}}>
-        <input type="surname" onChange={onChangeSurname} />
-        <input type="email" onChange={onChangeName} />
-        <input type="password" onChange={onChangePassword} />
+        <h1>{this.state.surname}</h1>
+        <h1>{this.state.email}</h1>
+        <h1>{this.state.password}</h1>
+
+        <input name="surname" value={this.state.surname} type="surname" onChange={onChange} />
+        <input name="email" value={this.state.email} type="email" onChange={onChange} />
+        <input name="password" value={this.state.password} type="password" onChange={onChange} />
         <button onClick={onSubmit}>Submit</button>
       </div>
     )

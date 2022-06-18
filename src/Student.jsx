@@ -33,8 +33,8 @@ export class Student extends React.Component{
         <h1>Count: {this.state.count}</h1>
         <button onClick={plus}>+</button>
         <button onClick={minus}>-</button>
-        <select name="" id="" onChange={onChange}>
         {/* <select name="" id="" onChange={(event) => onChange(event, "Ikkinchi prop")}> */}
+        <select name="" id="" onChange={onChange}>
 
           <option value="1">1</option>
           <option value="2">2</option>

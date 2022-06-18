@@ -19,6 +19,10 @@ export class State2 extends React.Component{
         this.setState({students})
       }
     }
+    const onDelete = (value) => {
+      let result = this.state.students.filter(({id}) => id !== value)
+      this.setState({students: result})
+    }
     return(
       <div style={{textAlign: "center", marginTop: "50px",}}>
         <input onChange={onChangeID} type="number" placeholder="Id" />
@@ -30,23 +34,28 @@ export class State2 extends React.Component{
           <option value="CS">CS</option>
         </select>
         <br />
-        <table border="1"  style={{textAlign:"center", width: "80%", margin: "0 auto"}}>
+        <table border="1"  style={{width: "45%", margin: "0 auto", }}>
+          <thead >
+                    <tr>
+                      <th>ID</th>
+                      <th>NAME</th>
+                      <th>Status</th>
+                      <th>CRUD</th>
+                    </tr>
+          </thead>
         {
           this.state.students.map((value) => {
             return (
               <>
-                <thead >
-                  <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
                 <tbody>
                   <tr>
                     <td>{value.id}</td>
                     <td>{value.name}</td>
                     <td>{value.status}</td>
+                    <td>
+                      <button onClick={() => onDelete(value.id)}>delete</button>
+                      <button>edit</button>
+                    </td>
                   </tr>
                 </tbody>
               </>

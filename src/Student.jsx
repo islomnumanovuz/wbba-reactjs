@@ -9,9 +9,14 @@ export class Student extends React.Component{
     }
   }
   render() {
-    const plus = () => {
+    const plus = (prop) => {
+      /* function getName() {
+        console.log("Hey");
+      }
+      () => getName()
+      getName() */
       this.setState({
-        count: this.state.count + this.state.increment
+        count: this.state.count + prop
       })
     }
     const minus = () => {
@@ -29,6 +34,8 @@ export class Student extends React.Component{
         <button onClick={plus}>+</button>
         <button onClick={minus}>-</button>
         <select name="" id="" onChange={onChange}>
+        {/* <select name="" id="" onChange={(event) => onChange(event, "Ikkinchi prop")}> */}
+
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>

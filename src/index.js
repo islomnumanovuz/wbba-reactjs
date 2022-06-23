@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { State2 } from "./State2";
+// import { State2 } from "./State2";
 // import { State } from "./State";
 // import { Student } from "./Student";
+import Condtional from "./components/Conditional-Rendering/Conditional.jsx"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <Student/> */}
     {/* <State/> */}
-    <State2/>
+    {/* <State2/> */}
+    <Condtional />
   </React.StrictMode>
 );

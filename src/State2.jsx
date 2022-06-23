@@ -36,17 +36,17 @@ export class State2 extends React.Component{
         <br />
         <table border="1"  style={{width: "45%", margin: "0 auto", }}>
           <thead >
-                    <tr>
-                      <th>ID</th>
-                      <th>NAME</th>
-                      <th>Status</th>
-                      <th>CRUD</th>
-                    </tr>
+              <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>Status</th>
+                <th>CRUD</th>
+              </tr>
           </thead>
         {
           this.state.students.map((value) => {
             return (
-              <>
+              <React.Fragment key={value.id}>
                 <tbody>
                   <tr>
                     <td>{value.id}</td>
@@ -58,7 +58,7 @@ export class State2 extends React.Component{
                     </td>
                   </tr>
                 </tbody>
-              </>
+              </React.Fragment>
             )
           })
         }

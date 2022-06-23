@@ -5,7 +5,8 @@ import "./index.css";
 // import { State } from "./State";
 // import { Student } from "./Student";
 // import Condtional from "./components/Conditional-Rendering/Conditional.jsx"
-import Image from "./components/Conditional-Rendering/Image";
+// import Image from "./components/Conditional-Rendering/Image";
+import Student from "./components/Styled-Components/Student";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
     {/* <State/> */}
     {/* <State2/> */}
     {/* <Condtional /> */}
-    <Image/>
+    {/* <Image/> */}
+    <Student />
   </React.StrictMode>
 );

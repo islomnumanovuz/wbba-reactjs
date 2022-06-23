@@ -25,7 +25,10 @@ export default class Condtional extends React.Component{
         alert("Failed")
       }
     }
-    if (this.state.isLoged) {
+    const logout = () => {
+      this.setState({isLoged: false})
+    }
+    /* if (this.state.isLoged) {
       return (
         <React.Fragment>
           <h1>Main Page</h1>
@@ -41,6 +44,18 @@ export default class Condtional extends React.Component{
           <button onClick={submit}>Login</button>
         </React.Fragment>
       )
-    }
+    } */
+    return (
+      <React.Fragment>
+        <h1>{this.state.isLoged ? "Main Page" : "Login Page"}</h1>
+        {
+          !this.state.isLoged && <>
+          <input type="text" onChange={({target: {value}}) => this.setState({text: value})} value={this.state.text}  />
+          <input type="password" onChange={({target: {value}}) => this.setState({password: value})} value={this.state.password}  />
+          </>
+        }
+        <button onClick={this.state.isLoged ? logout : submit}>{this.state.isLoged ? "Log out" : "Login"}</button>
+      </React.Fragment>
+    )
   }
 }

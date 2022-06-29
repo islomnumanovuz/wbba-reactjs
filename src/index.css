@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+body{
+  font-family: "Montserrat", cursive;
+}
+.container{
+  max-width: 1220px;
+  width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.site__title, .site__description{
+  text-align: center;
+  font-weight: 600;
+}
+.site__title{
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  color: #0D263B;
+  margin-bottom: 8px;
+}
+.site__description{
+  font-weight: 400;
+  font-size: 16px;
+  color: #696969;
+  margin-bottom: 32px;
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main__card{
+  max-width: 380px;
+  border: 1px solid #6969697b;
+}
+.main__card-image{
+  width: 380px;
+  height: 220px;
+}
+.main__card-image img{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 220px;
+}
+.main__card-body{
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid #6969697b;
+}
+.card-body__title{
+  font-weight: 600;
+  color: #0D263B;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.card-body__subtitle{
+  font-weight: 400;
+  font-size: 14px;
+  color: #696969;
+  margin: 0;
+}
+.main__card-footer{
+  padding: 0 20px;
+}
+
+.card-body__items{
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-body__item span{
+  display: block;
+  font-weight: 400;
+  margin-top: 7px;
+  color: #696969;
+}
+.card-footer__items{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-footer__items li:first-child{
+  max-width: 52px;
+}
+.card-footer__item span{
+  display: inline-block;
+}
+.card-footer__cursor{
+  margin-right: 20px;
+}
+.btn{
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  color: white;
+  padding:  5px 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 8px;
+}
+.btn:active{
+  opacity: .9;
+  transform: scale(0.9);
+}
+.btn-increase{
+  background-color: green;
+}
+.btn-decrease{
+  background-color: red;
 }

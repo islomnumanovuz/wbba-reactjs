@@ -1,16 +1,7 @@
-### Lesson 1 - Intro React Js
+### Lesson 2 -Props State Events
 
-#### What is ReactJs
+- Props
 
-- VirtualDom
-- UI component Based
-- Serverside Rendering
-- Unidirectional dataflow
+- State
 
-#### Folder structure
-
-#### JSX
-
-#### Component
-
-#### Export and import ES6 modules
+- Events

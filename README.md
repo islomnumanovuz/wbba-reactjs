@@ -1,5 +1,5 @@
-### Lesson 4 - Advanced state
+### Lesson 5 - Conditional rendering vs Inline rendering
 
-[Webbrain website](https://wbba.netlify.app/)
-
-- state
+- Conditional rendering
+- Inline rendering
+- Styled components

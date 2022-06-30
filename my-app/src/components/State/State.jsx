@@ -14,14 +14,29 @@ class State extends Component {
     */
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      count: 1,
+    };
   }
   render() {
     /* 
     React event handlers are written inside curly braces:
     onClick={shoot}  instead of onClick="shoot()"
     */
-    return <button onClick={console.log("1")}>State</button>;
+
+    const plus = () => {
+      this.setState({ count: this.state.count + 1 });
+    };
+    const minus = () => {
+      this.setState({ count: this.state.count - 1 });
+    };
+    return (
+      <React.Fragment>
+        <h1>{this.state.count}</h1>
+        <button onClick={plus}>+</button>
+        <button onClick={minus}>-</button>
+      </React.Fragment>
+    );
   }
 }
 

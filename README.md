@@ -1,3 +1,5 @@
-## Lessons
+### Lesson 8
 
-### Lesson 1 - Intro React Js
+- useState
+- useEffect
+- GitHub

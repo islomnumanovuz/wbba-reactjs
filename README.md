@@ -1,3 +1,5 @@
-## Lessons
+### Lesson 7
 
-### Lesson 1 - Intro React Js
+- Hooks
+- useState
+- useEffect

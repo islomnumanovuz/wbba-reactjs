@@ -14,7 +14,7 @@ class State extends Component {
     const onSubmit = () => {
       console.log(this.state);
     };
-    const onChangeUsername = ({ target }) => {
+    /* const onChangeUsername = ({ target }) => {
       this.setState({ username: target.value });
     };
     const onChangeEmail = ({ target }) => {
@@ -22,12 +22,15 @@ class State extends Component {
     };
     const onChangePassword = ({ target }) => {
       this.setState({ password: target.value });
+    }; */
+    const onChange = ({ target }) => {
+      this.setState({ [target.name]: target.value });
     };
     return (
       <React.Fragment>
-        <input onChange={onChangeUsername} type="username" />
-        <input onChange={onChangeEmail} type="email" />
-        <input onChange={onChangePassword} type="password" />
+        <input name="username" onChange={onChange} type="username" />
+        <input name="email" onChange={onChange} type="email" />
+        <input name="password" onChange={onChange} type="password" />
 
         <button onClick={onSubmit}>Submit</button>
       </React.Fragment>

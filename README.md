@@ -1,7 +1,3 @@
-### Lesson 2 -Props State Events
-
-- Props
+### Lesson 3 Advanced State
 
 - State
-
-- Events

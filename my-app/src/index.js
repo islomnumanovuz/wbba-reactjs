@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import State from "./components/State/State";
+// import State from "./components/State/State";
 // import Props from "./components/Props/Props";
+import Students from "./components/AdvancedState/Students";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,6 +16,8 @@ root.render(
       <h1>This is children props</h1>
     </Props> */}
 
-    <State />
+    {/* <State /> */}
+
+    <Students />
   </React.StrictMode>
 );

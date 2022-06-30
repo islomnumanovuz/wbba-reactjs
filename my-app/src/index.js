@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // import State from "./components/State/State";
 // import Props from "./components/Props/Props";
-import Students from "./components/AdvancedState/Students";
+// import Students from "./components/AdvancedState/Students";
+import StudentMock from "./components/Example/StudentMock";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,6 +19,8 @@ root.render(
 
     {/* <State /> */}
 
-    <Students />
+    {/* <Students /> */}
+
+    <StudentMock />
   </React.StrictMode>
 );

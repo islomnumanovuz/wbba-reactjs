@@ -15,6 +15,10 @@ export default class StudentMock extends Component {
 
       !value.length && this.setState({ students: students });
     };
+    const onDelete = (value) => {
+      let res = this.state.students.filter(({ id }) => id !== value);
+      this.setState({ students: res });
+    };
 
     return (
       <div className="container">
@@ -33,6 +37,7 @@ export default class StudentMock extends Component {
               <th>ID</th>
               <th>Name</th>
               <th>Status</th>
+              <th>Edit</th>
             </tr>
           </thead>
           <tbody>
@@ -42,6 +47,9 @@ export default class StudentMock extends Component {
                   <td>{student.id}</td>
                   <td>{student.name}</td>
                   <td>{student.status}</td>
+                  <td>
+                    <button onClick={() => onDelete(student.id)}>Delete</button>
+                  </td>
                 </tr>
               );
             })}

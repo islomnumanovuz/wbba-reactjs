@@ -1,3 +1,3 @@
-## Lessons
+### Lesson 6
 
-### Lesson 1 - Intro React Js
+- Styled components

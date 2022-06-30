@@ -9,13 +9,19 @@ export default class StudentMock extends Component {
     };
   }
   render() {
-    const onChangeId = ({ target: { value } }) => {
+    /*     const onChangeId = ({ target: { value } }) => {
       let res = students.filter((student) => student.id === +value);
       this.setState({ students: res });
       !value.length && this.setState({ students: students });
     };
     const onChangeName = ({ target: { value } }) => {
       let res = students.filter((student) => student.name.includes(value));
+      this.setState({ students: res });
+    }; */
+    const onChange = ({ target: { value, name } }) => {
+      let res = students.filter((student) => {
+        return `${student[name]}`.includes(value);
+      });
       this.setState({ students: res });
     };
     const onDelete = (value) => {
@@ -30,8 +36,13 @@ export default class StudentMock extends Component {
     return (
       <div className="container">
         <div className="input-group">
-          <input onChange={onChangeId} type="number" placeholder="id" />
-          <input onChange={onChangeName} type="text" placeholder="name" />
+          <input name="id" onChange={onChange} type="number" placeholder="id" />
+          <input
+            name="name"
+            onChange={onChange}
+            type="text"
+            placeholder="name"
+          />
           <select name="" id="" onChange={onChangeStatus}>
             <option value="BS">BS</option>
             <option value="IT">IT</option>

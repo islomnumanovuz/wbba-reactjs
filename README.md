@@ -1,3 +1,5 @@
-### Lesson 6
+### Lesson 7
 
-- Styled components
+- Hooks
+- useState
+- useEffect

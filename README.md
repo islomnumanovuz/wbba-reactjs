@@ -1,5 +1,3 @@
-### Lesson 5 - Conditional rendering vs Inline rendering
+### Lesson 6
 
-- Conditional rendering
-- Inline rendering
 - Styled components

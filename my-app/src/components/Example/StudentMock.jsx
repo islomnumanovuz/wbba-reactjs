@@ -6,6 +6,7 @@ export default class StudentMock extends Component {
     super();
     this.state = {
       students,
+      selected: {},
     };
   }
   render() {
@@ -32,6 +33,19 @@ export default class StudentMock extends Component {
       console.log(target.value);
       let res = students.filter((student) => student.status === target.value);
       this.setState({ students: res });
+    };
+    const onEdit = (value) => {
+      this.setState({ selected: value });
+    };
+
+    const onSave = () => {
+      let res = this.state.students.map((value) =>
+        this.state.selected.id === value.id ? this.state.selected : value
+      );
+      this.setState({ students: res, selected: {} });
+    };
+    const onChangeInput = ({ target: { name, value } }) => {
+      this.setState({ selected: { ...this.state.selected, [name]: value } });
     };
     return (
       <div className="container">
@@ -62,11 +76,36 @@ export default class StudentMock extends Component {
             {this.state.students.map((student, index) => {
               return (
                 <tr key={student.id}>
-                  <td>{student.id}</td>
-                  <td>{student.name}</td>
-                  <td>{student.status}</td>
+                  <td>{index + 1}</td>
+                  <td>
+                    {this.state.selected.id === student.id ? (
+                      <input
+                        onChange={onChangeInput}
+                        name="name"
+                        value={this.state.selected.name}
+                      />
+                    ) : (
+                      student.name
+                    )}
+                  </td>
+                  <td>
+                    {this.state.selected.id === student.id ? (
+                      <input
+                        onChange={onChangeInput}
+                        name="status"
+                        value={this.state.selected.status}
+                      />
+                    ) : (
+                      student.status
+                    )}
+                  </td>
                   <td>
                     <button onClick={() => onDelete(student.id)}>Delete</button>
+                    {this.state.selected.id === student.id ? (
+                      <button onClick={() => onSave(student)}>Save</button>
+                    ) : (
+                      <button onClick={() => onEdit(student)}>Edit</button>
+                    )}
                   </td>
                 </tr>
               );
@@ -85,3 +124,8 @@ export default class StudentMock extends Component {
   Update
   Delete
 */
+
+// Problems into subproblems
+// click the edit button
+// get Id
+// status and name cange to editable

@@ -1,3 +1,5 @@
-## Lessons
+### Lesson 5 - Conditional rendering vs Inline rendering
 
-### Lesson 1 - Intro React Js
+- Conditional rendering
+- Inline rendering
+- Styled components

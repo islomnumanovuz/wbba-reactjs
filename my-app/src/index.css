@@ -146,3 +146,12 @@ nav ul li:not(:first-child) {
   display: inline-block;
   margin-left: 50px;
 }
+.btn {
+  background-color: var(--greenColor);
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
